@@ -25,9 +25,36 @@ body {
 
 //-->
 
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("input:text").val(function(n, city){
+        var api_call = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=d0f50e54a9a6bc4cb85e754393ccaead";
+        $('.api').text(api_call);
+      $.getJSON(api_call, function(data) {
+        console.log(data);
+         var temp = data.main.temp;
+         var converted_temp = Math.round((((temp-273.15)*9)/5)+32);     
+        $('.tempF').text(converted_temp);
+      });
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<p>City: <input type="text" name="user" value=""></p>
+
+<button>Select City</button>
+
+</body>
+</html>
+
 <div class="output">
-  <h1 class="city"></h1>
-  <h2 class="temp"></h2>
-  <div class="image"><img src=""/></div>
+  <h1 class= tempF ></h1>
 </div>
 
