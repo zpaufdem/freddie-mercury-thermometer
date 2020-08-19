@@ -1,20 +1,12 @@
 <html>
 <head>
-<script>
-var DateDiff = {
+
+ <form action="/action_page.php">
+  <label for="fname">City:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="Submit">
+</form>
  
-    inDays: function(d1, d2) {
-        var t2 = d2.getTime();
-        var t1 = d1.getTime();
- 
-        return parseInt((t2-t1)/(24*3600*1000));
-   
-var dString = "January, 16, 2014";
- 
-var d1 = new Date(dString);
-var d2 = new Date();
- 
-</script>
 </head>
 <style>
 body {
