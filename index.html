@@ -32,12 +32,7 @@ body {
 $(document).ready(function(){
   $("button").click(function(){
     $("input:text").val(function(n, city){
-     input.addEventListener("keyup", function(event) {
-      if (event.keyCode === 13) {
-      event.preventDefault();
-      document.getElementById("myBtn").click();
- }
-});
+   
         var api_call = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=d0f50e54a9a6bc4cb85e754393ccaead";
         $('.api').text(api_call);
       $.getJSON(api_call, function(data) {
@@ -129,14 +124,24 @@ $(document).ready(function(){
 <body>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+ <style>
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="center">
     <p>City: <input type="text" name="user" value=""></p>
-
+</div>
+  <div class="center">
     <button>Select City</button>
- 
- 
+</div>    
+ <div class="center">
+  <h1 class= tempF ></h1>
+</div>
+
 </body>
 </html>
 
-<div class="output">
-  <h1 class= tempF ></h1>
-</div>
