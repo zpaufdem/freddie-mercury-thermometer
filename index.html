@@ -39,6 +39,35 @@ $(document).ready(function(){
          var temp = data.main.temp;
          var converted_temp = Math.round((((temp-273.15)*9)/5)+32);     
         $('.tempF').text(converted_temp);
+       
+               switch(converted_temp){
+          case 60:
+          case 61:
+          case 62:
+          case 63:
+          case 64:
+          case 65:
+            var song = "chelsea dagger lyrics.mp3"
+            break;
+          case 66:
+          case 67:
+          case 68:
+          case 69:
+          case 70:
+          case 71:
+          case 72:
+          case 73:
+            var song = "bar";
+            break;
+          default:
+            var song = "NA";
+            
+        }
+       
+       $("div").html("<audio src='" + song + "' controls preload='auto' autobuffer></audio>");
+
+       
+       
       });
     });
   });
@@ -57,4 +86,3 @@ $(document).ready(function(){
 <div class="output">
   <h1 class= tempF ></h1>
 </div>
-
