@@ -40,68 +40,68 @@ $(document).ready(function(){
          var converted_temp = Math.round((((temp-273.15)*9)/5)+32);     
         $('.tempF').text(converted_temp);
        
-               switch(converted_temp){
-          case (converted_temp < 5)
+               switch(true){
+                case (converted_temp < 5):
             var song = "1all dead all dead.mp3";
             break;
-          case (converted_temp < 10)
+                case (converted_temp < 10):
             var song = "3 ride the wild wind.mp3";
             break;
-          case (converted_temp < 15)
+                case (converted_temp < 15):
             var song = "5 flick of the wrist.mp3";
             break;
-          case (converted_temp < 20)
+                case (converted_temp < 20):
             var song = "6 golden boy.mp3";
             break;
-          case (converted_temp < 25)
+                case (converted_temp < 25):
             var song = "8 you dont fool me.mp3";
             break;                 
-          case (converted_temp < 30)
+                case (converted_temp < 30):
             var song = "9 silver salmon.mp3";
             break;
-          case (converted_temp < 35)
+                case (converted_temp < 35):
             var song = "11 good ol fashioned lover boy.mp3";
             break;                 
-            case (converted_temp < 40)
+                case (converted_temp < 40):
             var song = "12 somebody to love.mp3";
             break;               
-           case (converted_temp < 45)
+                case (converted_temp < 45):
             var song = "14 sweet lady.mp3";
             break;                
-          case (converted_temp < 50)
+                case (converted_temp < 50):
             var song = "15 i want to break free.mp3";
             break;
-          case (converted_temp < 55)
+                case (converted_temp < 55):
             var song = "18 its late.mp3";
             break;                 
-          case (converted_temp < 60)
+                case (converted_temp < 60):
             var song = "19 spread your wings.mp3";
             break;                 
-          case (converted_temp < 65)
+                case (converted_temp < 65):
             var song = "23 Mr bad guy.mp3";
             break;                 
-           case (converted_temp < 70)
+                case (converted_temp < 70):
             var song = "24 its a beautiful day.mp3";
             break;                
-          case (converted_temp < 75)
+                case (converted_temp < 75):
             var song = "25 dead on time.mp3";
             break;                 
-          case (converted_temp < 80)
+                case (converted_temp < 80):
             var song = "28 the show must go on.mp3";
             break;
-          case (converted_temp < 85)
+                case (converted_temp < 85):
             var song = "29 somebody to love.mp3";
             break;                 
-          case (converted_temp < 90)
+                case (converted_temp < 90):
             var song = "31 seven seas of rhye.mp3";
             break;                 
-          case (converted_temp < 95)
+                case (converted_temp < 95):
             var song = "32 the kiss.mp3";
             break;                 
-              case (converted_temp <= 100)
+                case (converted_temp <= 100):
             var song = "36 random improv.mp3";
             break;             
-         case (converted_temp > 100)
+                case (converted_temp > 100):
             var song = "38 i go crazy.mp3";
             break;
           default:
