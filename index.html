@@ -31,7 +31,7 @@ body {
 <script>
 $(document).ready(function(){
   $("button").click(function(){
-    $("input:search").val(function(n, city){
+    $("input:text").val(function(n, city){
    
         var api_call = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=d0f50e54a9a6bc4cb85e754393ccaead";
         $('.api').text(api_call);
