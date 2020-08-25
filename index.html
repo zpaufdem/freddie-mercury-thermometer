@@ -113,8 +113,15 @@ $(document).ready(function(){
        
        //$("div").html("<audio src='" + song + "' autoplay preload='auto'></audio>");
        $("div").html("<audio src='" + song + "' autoplay></audio>");
-       <input id="realbox" type="text" autocomplete="off" spellcheck="false" aria-live="polite" autofocus="" placeholder="Enter a city">
        
+       
+       <div id="realbox-input-wrapper">
+        <div id="realbox-icon" data-default-icon="search.svg" data-icon="search.svg" style="-webkit-mask-image: url(&quot;search.svg&quot;);">
+        </div>
+       <input id="realbox" type="text" autocomplete="off" spellcheck="false" aria-live="polite" autofocus="" placeholder="Enter a city">
+        //<button id="realbox-microphone" class="microphone-icon" title="Search by voice"></button>
+        <div id="realbox-matches"></div>
+      </div>
       });
     });
   });
