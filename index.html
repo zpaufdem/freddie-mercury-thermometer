@@ -85,7 +85,7 @@ $(document).ready(function(){
         }
                
         
-        $('.song').audio(song);
+       $("div").html("<audio src='" + song + "' controls preload='auto' autobuffer></audio>");
 
       // $("div").html("<audio src='" + song + "' autoplay preload='auto'></audio>");
        //$("div").html("<audio src='" + song + "' autoplay></audio>");
@@ -146,9 +146,7 @@ $(document).ready(function(){
 <div class="padding">
   <h1></h1>
 </div>  
- 
-<audio src='" + song + "' autoplay preload='auto'></audio>
-  
+   
 </body>
 </html>
 
